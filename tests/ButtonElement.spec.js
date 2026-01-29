@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("Handling Input Field related scenario in PW_JS", async ({page}) => {
+test("Handling Button element related scenario in PW_JS", async ({page}) => {
     await page.goto("https://letcode.in/");
     await page.locator('a[id="testing"][href="/test"]').click();
     await expect(page.locator(".card-header-title", {hasText: "Button"})).toBeVisible();

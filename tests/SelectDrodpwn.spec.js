@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("", async ({page}) => {
+test("Handling Select Dropdown related scenario in PW_JS", async ({page}) => {
     await page.goto("https://letcode.in/");
     await page.locator('a[id="testing"][href="/test"]').click();
     await expect(page.locator('//*[contains(@class, "card-header-title") and normalize-space()="Select"]')).toBeVisible();
