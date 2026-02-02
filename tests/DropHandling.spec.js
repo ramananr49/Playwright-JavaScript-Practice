@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { sourceMapsEnabled } from "node:process";
 
-test("", async ({page}, testInfo) => {
+test("Handling Drop related scenario in PW_JS", async ({page}, testInfo) => {
     await page.goto("https://letcode.in");
     await page.locator('a[id="testing"][href="/test"]').click();
     await expect(page.locator('//*[contains(@class, "card-header-title") and normalize-space()="Drop"]')).toBeVisible();
